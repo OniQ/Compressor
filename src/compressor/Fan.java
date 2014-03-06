@@ -15,8 +15,7 @@ import static file.FileManager.bitSetToString;
 
 import compressor.actions.CompressAction;
 import file.FileManager;
- 
-
+  
 public class Fan {
     
     public LinkedHashMap<BitSet, CodeStruct> tree = new LinkedHashMap<>();
@@ -55,8 +54,7 @@ public class Fan {
             }
             else{
                 symb = bitSetToString(pairs.getKey(), symbSize);
-            }
-
+            } 
             String s = String.format("%s ---> %s\n", symb, bitSetToString(pairs.getValue().code, pairs.getValue().length));
             result += s;
          }
@@ -81,7 +79,6 @@ public class Fan {
         int sum = getSum(it);
         int partSum = 0;
         it = set1.entrySet().iterator();
-        
         
         while (it.hasNext()) {
             Entry<BitSet, Integer> pairs = it.next(); 
@@ -119,7 +116,6 @@ public class Fan {
                     }while(it1.hasNext());
                     break;
                 }
-                
             }
         }
         iteration++;

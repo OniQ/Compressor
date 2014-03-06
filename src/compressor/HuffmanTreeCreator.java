@@ -85,31 +85,31 @@ public class HuffmanTreeCreator {
     static public final LinkedHashMap<BitSet, CodeStruct> createCodeTree(){
         HuffmanNode leaf;
         LinkedHashMap<BitSet, CodeStruct> tree = new LinkedHashMap<>();
-            for (HuffmanNode hn : huffmanTree){
-                if (hn.symb != null){
-                    BitSet symbol = hn.symb;
-                    BitSet code = new BitSet();
-                    leaf = hn;
-                    int i = 0;
-                    do{
-                        if ((leaf.index % 2) == 0){
-                            code.set(i, true);
-                        }
-                        else{
-                            code.set(i, false);
-                        }
-                        i++;
-                        leaf = leaf.parent;
-                    }while(leaf.parent != null);
-                    BitSet temp = new BitSet();
-                    for(int j = 0; j < i; j++){
-                        temp.set(j, code.get(i - j - 1));
+        for (HuffmanNode hn : huffmanTree){
+            if (hn.symb != null){
+                BitSet symbol = hn.symb;
+                BitSet code = new BitSet();
+                leaf = hn;
+                int i = 0;
+                do{
+                    if ((leaf.index % 2) == 0){
+                        code.set(i, true);
                     }
-                    code = temp;
-                    tree.put(symbol, new CodeStruct(code, i));
-                } 
-            }  
-            return tree;
+                    else{
+                        code.set(i, false);
+                    }
+                    i++;
+                    leaf = leaf.parent;
+                }while(leaf.parent != null);
+                BitSet temp = new BitSet();
+                for(int j = 0; j < i; j++){
+                    temp.set(j, code.get(i - j - 1));
+                }
+                code = temp;
+                tree.put(symbol, new CodeStruct(code, i));
+            } 
+        }  
+        return tree;
     } 
     
     public static void numTree(){
