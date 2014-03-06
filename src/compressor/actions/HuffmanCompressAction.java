@@ -97,5 +97,4 @@ public class HuffmanCompressAction extends CompressAction {
          }
          return result + "\n";
     }
-
 }

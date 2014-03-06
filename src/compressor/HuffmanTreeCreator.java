@@ -121,5 +121,4 @@ public class HuffmanTreeCreator {
                 index++;
          }
     }  
-
 }

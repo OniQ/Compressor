@@ -35,5 +35,4 @@ public class HuffmanNode {
             }
         return str;
     }
-    
 }

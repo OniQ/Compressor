@@ -110,5 +110,4 @@ public class CounterAction implements Action {
             processData(null);
         }
     }
-
 }

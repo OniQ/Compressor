@@ -155,5 +155,4 @@ public class CompressAction extends CounterAction {
             fileM.fileOutputBuffered(null);
         }
     }
-
 }

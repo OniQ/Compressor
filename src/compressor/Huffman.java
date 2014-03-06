@@ -33,5 +33,4 @@ public class Huffman extends Fan {
     public String getTree(){
         return action.getTree();
     }
-    
 }
